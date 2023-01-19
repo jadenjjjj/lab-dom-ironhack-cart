@@ -32,10 +32,19 @@ function calculateAll() {
   // ITERATION 3
   //... your code goes here
   const allSub = document.getElementById("total1").innerText;
+  const allSub1 = parseInt(allSub);
+
   const allSub2 = document.getElementById("total2").innerText;
-  const sum = parseInt(allSub) + parseInt(allSub2);
-  console.log(allSub);
-  document.getElementById('total-value').innerText = sum;
+  const allSub3 = parseInt(allSub2);
+  const sum = allSub1 + allSub3;
+  //console.log(typeof(sum));
+
+  const x = document.getElementById('total-value');
+  const y = x.getElementsByTagName("span");
+  y[0].innerText = sum;
+  
+  //console.log(y[0]);
+  //document.getElementById('total-value').innerText = sum;
   //document.getElementById("total-value").innerHTML = updateSubtotal(document);
   //console.log(sum);
 }
